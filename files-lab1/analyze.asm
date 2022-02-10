@@ -12,8 +12,8 @@ loop:
 	syscall			# one byte from a0 to the Run I/O window
 
 	addi	$s0,$s0,3	# what happens if the constant is changed?
-				#we change to 3 dso that the code "jumps" 3 steps insted of 1
-	li	$t0,0x5d	#we change the value to 0x5d to stop the loop when t0 is 0x5d which is "]"
+	
+	li	$t0,0x5d
 	bne	$s0,$t0,loop
 	nop			# delay slot filler (just in case)
 
