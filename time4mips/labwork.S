@@ -111,7 +111,18 @@ time2string:
 	nop
 	sb 	$v0, 4($s0)		 	# Sparar värdet som returneras från hexasc i femte "byte location i s1	
 						
-						
+	# Addera D eller E 
+	andi $t1, $s1, 0x000f 
+	beq $t1, 0x0000, addE 
+	beq $t1, 0x0001, addD 
+	beq $t1, 0x0002, addE 
+	beq $t1, 0x0003, addD 
+	beq $t1, 0x0004, addE 
+	beq $t1, 0x0005, addD 
+	beq $t1, 0x0006, addE 
+	beq $t1, 0x0007, addD 
+	beq $t1, 0x0008, addE 
+	beq $t1, 0x0009, addD 					
 
 
 	# NUL byte
@@ -126,5 +137,19 @@ time2string:
 		POP	$s0	
  		jr 	$ra
  		nop	
- 		
+ 	
+ addE: 
+ 	li $t1, 0x45 # Lägg in ASCII nummret för E i t1 
+ 	sb $t1, 5($s0) # Spara i 6te byte location i s0
+ 	li $t1, 0x00 # laddar in ASCII för NUL
+ 	sb $t1, 6($s0) # Sparar NUL i 7de byte location
+ 	j exit_time2string 
+ 	nop 
+ addD: 
+ 	li $t1, 0x44 # Lägg in ASCII nummret för D i t1
+ 	sb $t1, 5($s0) #  Spara i 6te byte location i s0
+ 	li $t1, 0x00 # laddar in ASCII för NUL 
+ 	sb $t1, 6($s0) # Sparar NUL i 7de byte location
+ 	j exit_time2string 
+ 	nop 		
  
