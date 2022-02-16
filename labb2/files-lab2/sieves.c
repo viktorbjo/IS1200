@@ -15,7 +15,7 @@ void print_number(int number){
 }
 
 void print_sieves(int input){
-
+//här ska det skrivas kod
 }
 
 
