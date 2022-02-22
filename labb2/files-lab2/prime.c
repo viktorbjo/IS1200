@@ -11,13 +11,13 @@
 int is_prime(int n){
   int i;
 
-  for(i=2; i<=n-1; i++){
-  	if(n%i==0){
-	return 0;
+  for(i=2; i<=n-1; i++){ // böjrar med en loop som börjar på 2 som är första prim tal
+  	if(n%i==0){	// tar sedan en modulo för att kolla om värdet är delbart med i
+	return 0;	// returnerar noll isåfall, n-1 gör att vi aldrig kommer dela med sig sjäv.
 	}
   }	
-	if(i==n){
-	return 1;
+	if(i==n){ 	// dubbelkollar så de är samma
+	return 1;	// returnerar 1
 	}  
 }
 

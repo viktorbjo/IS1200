@@ -20,12 +20,12 @@ void print_sieves(int input_value){
 	int array_size = input_value - 1; // initterar arrayn vi kommer använda
 	char amount_numbers[array_size]; // lokal array
 
-	for(int i = 0; i < array_size; i++){
+	for(int i = 0; i < array_size; i++){ // vi fyller arrayen med ettor
 	amount_numbers[i] = 1;
-	}
+	} 
 
 
-	for(int i = 2; i <= (int) sqrt(input_value); i++){
+	for(int i = 2; i <= (int) sqrt(input_value); i++){ //vi kollar kvadraten av inputet.
 		if(amount_numbers[i] == 1){	//detta är för att kolla om vi redan kollat nummret
 			for(int j = i*i; j <= input_value; j+=i){ //för varje mulptipel av numret
 			amount_numbers[j] = 0; //makrerar som ett icke prime

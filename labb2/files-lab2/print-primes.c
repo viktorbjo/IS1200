@@ -13,7 +13,7 @@
 
 int column_count = 0;
 
-void print_number(int number){
+void print_number(int number){ 		//en funktion som efter 6 rader prim tal gör en ny rad.
 	printf("%10d", number);
 	column_count++;
 	if(column_count%COLUMNS == 0){
@@ -51,9 +51,9 @@ void print_primes(int n){
   //printf("%10d ", 19);
 
   int i = 0;
-  for(i = 2; i<n; i++){
-  	if(is_prime(i)){	
-	print_number(i);
+  for(i = 2; i<n; i++){ 	//samma for loop som tidigare, 
+  	if(is_prime(i)){	// om is prime returnerar det värdet som i antar så 
+	print_number(i);	//  printar vi numret med print_number funktionen. 
 	}
   }	
   printf("\n");
