@@ -17,7 +17,7 @@ void print_number(int number){
 }
 
 void print_sieves(int input_value){
-	int array_size = input_value - 1; // initterar arrayn vi kommer använda
+	int array_size = input_value + 1; // initterar arrayn vi kommer använda
 	char amount_numbers[array_size]; // lokal array
 
 	for(int i = 0; i < array_size; i++){ // vi fyller arrayen med ettor
@@ -40,7 +40,10 @@ void print_sieves(int input_value){
 		print_number(i);
 		}
 	}
+		
+
 }
+
 
 
 

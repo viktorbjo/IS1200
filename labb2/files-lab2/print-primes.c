@@ -51,7 +51,7 @@ void print_primes(int n){
   //printf("%10d ", 19);
 
   int i = 0;
-  for(i = 2; i<n; i++){ 	//samma for loop som tidigare, 
+  for(i = 2; i<=n; i++){ 	//samma for loop som tidigare, 
   	if(is_prime(i)){	// om is prime returnerar det värdet som i antar så 
 	print_number(i);	//  printar vi numret med print_number funktionen. 
 	}
