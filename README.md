@@ -1,3 +1,3 @@
 # IS1200
 
-labbar, seminar och projekt
+labbar, seminar och projekt.
